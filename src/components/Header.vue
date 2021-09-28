@@ -3,16 +3,7 @@
       <nav>
           <img src="../img/dc-logo.png" alt="Dc logo">
           <ul>
-              <li>characters</li>
-              <li class="active">comics</li>
-              <li>movies</li>
-              <li>tv</li>
-              <li>games</li>
-              <li>collectibles</li>
-              <li>videos</li>
-              <li>fans</li>
-              <li>news</li>
-              <li>shop</li>
+              <li v-for="(element, index) in elements" :key=index> {{element}}</li>
 
           </ul>
       </nav>
@@ -23,6 +14,24 @@
 <script>
 export default {
     name: 'Header',
+
+    data: function(){
+        return{
+
+            elements:[
+                'characters',
+                'comics',
+                'movies',
+                'tv',
+                'games',
+                'collectibles',
+                'videos',
+                'fans',
+                'news',
+                'shop'
+            ]
+        }
+    }
 
 }
 </script>
